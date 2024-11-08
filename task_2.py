@@ -16,3 +16,14 @@ print('Задача 2. Театр')
 # ======= *** =======
 # ======= *** =======
 # ======= *** =======
+
+print("Сцена")
+
+row = int(input("Введите кол-во рядов: "))
+seat = int(input("Введите кол-во сидений в ряду: "))
+distance = int(input("Введите кол-во метров между рядами: "))
+
+for _ in range(row):
+    print("=" * seat, sep = "", end = " ")
+    print("*" * distance, sep = "", end = " ")
+    print("=" * seat, sep = "")
