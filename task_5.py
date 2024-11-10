@@ -19,3 +19,20 @@ print('Задача 5. Коровы')
 # Введите 10 стойл в одну строку. a — свободное стойло, b — занятое:
 # aaababbaab
 # Произведено молока за день: 54
+
+positions = input("Введите 10 стойл в одну строку. а - свободное стойло, b - занятое: \n")
+step = 2
+milk_amount = 2
+all_milk = 0
+flag = True
+
+while flag == True:
+    if len(positions) != 10:
+        positions = input("Введено неверное количество стойл! Попробуйте ввести 10 стойл: \n")
+    else:
+        for position in positions:
+            if position.upper() == "B":
+                all_milk += milk_amount
+            milk_amount += step
+        print(f"Произведено молока за день: {all_milk}")
+        flag = False
