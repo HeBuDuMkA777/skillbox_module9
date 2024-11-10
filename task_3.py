@@ -22,6 +22,33 @@ print('Задача 3. Марсоход-2')
 
 maximum_x = 15
 maximum_y = 20
+minimum_x = 1
+minimum_y = 1
 
 position_x = 8
 position_y = 10
+
+while True:
+    comand = input(f'[Программа]: Марсоход находится на позиции {position_x}, {position_y}, введите команду: ')
+    if comand.upper() == "A":
+        position_x -= 1
+    elif comand.upper() == "D":
+        position_x += 1
+    elif comand.upper() == "W":
+        position_y += 1
+    elif comand.upper() == "S":
+        position_y -= 1
+    else:
+        print("[Программа]: Команда не известна, введите корректную команду: (W, S, A, D) ") 
+    if position_y > maximum_y:
+        position_y = maximum_y
+        continue
+    if position_y < minimum_y:
+        position_y = minimum_y
+        continue
+    if position_x > maximum_x:
+        position_x = maximum_x
+        continue
+    if position_x < minimum_x:
+        position_x = minimum_x
+        continue
