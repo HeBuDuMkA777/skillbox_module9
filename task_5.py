@@ -24,9 +24,9 @@ positions = input("Введите 10 стойл в одну строку. а - �
 step = 2
 milk_amount = 2
 all_milk = 0
-flag = True
+end_program = False
 
-while flag == True:
+while end_program == False:
     if len(positions) != 10:
         positions = input("Введено неверное количество стойл! Попробуйте ввести 10 стойл: \n")
     else:
@@ -35,4 +35,4 @@ while flag == True:
                 all_milk += milk_amount
             milk_amount += step
         print(f"Произведено молока за день: {all_milk}")
-        flag = False
+        end_program = True
