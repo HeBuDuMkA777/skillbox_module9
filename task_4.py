@@ -13,3 +13,11 @@ print('Задача 4. Великий и могучий')
 
 # Введите текст: Меня зовут Василий
 # Самое длинное слово, 7 букв
+
+my_text = input("Введите текст: ").split()
+max_len = 0
+
+for word in my_text:
+    if len(word) > max_len:
+        max_len = len(word)
+print(f'Самое длинное слово, {max_len} букв')
